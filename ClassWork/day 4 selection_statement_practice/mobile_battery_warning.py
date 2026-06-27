@@ -26,23 +26,22 @@ print("-------------------------------------------------------------------------
 
 # Validating battery percentage
 
-if (battery_percentage <= 0):
-    exit("Battery Percentage must be positive")
+if (battery_percentage < 0 or battery_percentage >100):
+    exit("Invalid data")
 
 #------------------------------------------------------------------------------------------------------------------
 
-# Checking battery percentage
+# Checking battery percentage and displaying battery warning
 
 if (battery_percentage < 15):
     print("Connect Charger Immediately")
 
-else:
-    print("Nothing")
+
 
 #----------------------------------------------------------------------------------------------------------------
 
 '''Output:
-Enter the Battery Percentage : 50
+Enter the Battery Percentage : 10
 ------------------------------------------------------------------------------------------------------
-Nothing
+Connect Charger Immediately
 '''
