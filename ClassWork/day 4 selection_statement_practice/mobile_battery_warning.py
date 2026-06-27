@@ -18,7 +18,7 @@ Connect Charger Immediately
 
 # Taking battery percentage input from the user
 
-battery_percentage = float(input("Enter the Battery Percentage : "))
+battery_percentage = int(input("Enter the Battery Percentage : "))
 
 print("------------------------------------------------------------------------------------------------------")
 
