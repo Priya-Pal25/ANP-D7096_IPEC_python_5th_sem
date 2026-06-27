@@ -1,4 +1,4 @@
-'''Write a program to calculate speed when distance and time has been po=rovided'''
+'''Write a program to calculate speed when distance and time has been provided'''
 
 #taking input from user
 

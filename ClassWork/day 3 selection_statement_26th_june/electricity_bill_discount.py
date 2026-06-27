@@ -28,7 +28,7 @@ bill_amount = float(input("Enter the Electricity bill amount (in Rs): "))
 if (bill_amount <= 0):
     exit("Electricity bill amount should be positive")
 #----------------------------------------------------------------------
-# Calculating bill_amoount
+# Calculating bill_amount
 
 if(bill_amount >= 5000):
     print("Discount Applied!")
