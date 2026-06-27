@@ -18,7 +18,7 @@ Access Granted to the Vault.
 
 # Taking security code input from the user
 
-security_code = int(input("Enter the Security Code: " ))
+security_code = int(input("Enter the four digit Security Code: " ))
 
 print("-------------------------------------------------------------")
 
