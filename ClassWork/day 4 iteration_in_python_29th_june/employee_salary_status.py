@@ -17,7 +17,7 @@ emp = int (input("Enter the no of Employees : "))
 
 #---------------------------------------------------------------------------------------------------------------
 
-# Validating salary
+# Validating emp
 
 if (emp <= 0):
     exit("Number of employees must be positive")
