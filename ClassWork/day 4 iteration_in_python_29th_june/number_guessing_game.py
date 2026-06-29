@@ -18,13 +18,23 @@ print("-------------------------------------------------------------------------
 
 secret_num = 37
 
-while (secret_num != 37):
-    if (secret_num < 37):
+while (num != secret_num):
+    if (num < secret_num):
         print("Number is too low")
         num = int(input("Enter number: "))
-    ele:
+    else:
         print("Number is too high")
         num = int(input("Enter number: "))
+print("The number is correct")
 
+#-----------------------------------------------------------------------------------------------------------------
 
-    
+'''Output:
+Enter number: 45
+----------------------------------------------------------------------------------------------------
+Number is too high
+Enter number: 25
+Number is too low
+Enter number: 37
+The number is correct
+'''
