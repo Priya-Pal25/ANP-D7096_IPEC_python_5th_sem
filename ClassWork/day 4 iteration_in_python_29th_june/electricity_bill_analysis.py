@@ -16,22 +16,45 @@ Calculate and display:
 
 # Taking input from the user
 house = int(input("Enter the no of houses : "))
-total_units = 0
-max = 0
-min = 0
+
+#---------------------------------------------------------------------------------------------------------------
+
+# Validating houses
+
+if (house <= 0):
+    exit("Number of houses must be positive")
 
 #-------------------------------------------------------------------------------------------------------------------
 
+total_units = 0
 #Accept the monthly units consumed by each house.
 for x in range(1,house+1):
     units = float(input("Enter the units consumed (monthly): "))
+
+    # validating units
+
+    if (units <= 0):
+        exit("Units must be positive")
+
+    #-------------------------------------------------------------------------------------------------------------------
+
+
     total_units = total_units + units
-    
-    if (units > max):
-        max = units
+    #-------------------------------------------------------------------------------------------------------------------
+
+    #  analyzing electricity consumption of N houses  
+
+    if x == 1:
+        highest = units
+        lowest= units
+
     
     else:
-        min = units
+        if (units > highest):
+            highest = units
+        if (units < lowest):
+            lowest = units
+        
     
 
 
@@ -43,22 +66,24 @@ print("Total unit Consumption : " ,total_units)
 print("Average unit Consumption :", (total_units/house))
 
 # Calculate and display  Highest consumption
-print("Highest Consumption :",max)
+print("Highest Consumption :",highest)
 
 # Calculate and display Lowest consumption 
-print("Lowest Consumption : ",min)
+print("Lowest Consumption : ",lowest)
 
 #---------------------------------------------------------------------------------------------------------------------------------------
 
 '''Output:
-Enter the no of houses : 3
+Enter the no of houses : 5
+Enter the units consumed (monthly): 23
+Enter the units consumed (monthly): 47
 Enter the units consumed (monthly): 56
-Enter the units consumed (monthly): 41
-Enter the units consumed (monthly): 21
-Total unit Consumption :  118.0
-Average unit Consumption : 39.333333333333336
-Highest Consumption : 56.0
-Lowest Consumption :  21.0
+Enter the units consumed (monthly): 84
+Enter the units consumed (monthly): 14
+Total unit Consumption :  224.0
+Average unit Consumption : 44.8
+Highest Consumption : 84.0
+Lowest Consumption :  14.0
 '''
 
 
