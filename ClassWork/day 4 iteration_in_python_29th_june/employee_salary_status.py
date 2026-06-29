@@ -62,13 +62,13 @@ for x in range(1,emp+1):
 #-------------------------------------------------------------------------------------------------------------------
 
 # Calculate and display Average salary
-print("Average unit Consumption :", (total_Salary/emp))
+print("Average salary :", (total_Salary/emp))
 
 # Calculate and display  Highest salary
-print("Highest Consumption :",highest)
+print("Highest salary :",highest)
 
 # Calculate and display Lowest salary
-print("Lowest Consumption : ",lowest)
+print("Lowest salary : ",lowest)
 
 # Calculate and display the no of employees earning more than 50,000
 print("Number of employees earning more than 50000 : ",count)
