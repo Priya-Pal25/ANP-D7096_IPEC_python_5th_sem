@@ -31,7 +31,7 @@ count = 0
 for x in range(1,emp+1):
     salary = float(input("Enter the salary : "))
 
-    # validating units
+    # validating salary
 
     if (salary <= 0):
         exit("Employee salary must be positive")
@@ -70,7 +70,7 @@ print("Highest Consumption :",highest)
 # Calculate and display Lowest salary
 print("Lowest Consumption : ",lowest)
 
-# Calculate and display the no of employees earning more than ₹50,000
+# Calculate and display the no of employees earning more than 50,000
 print("Number of employees earning more than 50000 : ",count)
 #-------------------------------------------------------------------------------------------------------------------------
 
