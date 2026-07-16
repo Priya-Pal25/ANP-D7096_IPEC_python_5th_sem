@@ -1,0 +1,52 @@
+Problem 1: Electricity Bill Calculator 
+Write a Python program that calculates the electricity bill based on the following conditions: 
+Units 
+Rate per Unit 
+First 100 ₹5
+Next 100 ₹7 
+Above 200 ₹10 
+Additional Charges: 
+• If the bill exceeds ₹2000, apply a 5% surcharge.  
+• If the total bill is below ₹500, the minimum bill should be ₹500.  
+Display: 
+• Total Units  
+• Bill Amount  
+• Final Payable Amount  
+#----------------------------------------------------------------------------------------------------------------
+#------------------------------------------------Coding----------------------------------------------------------
+
+#Taking input from the user
+units = int(input("Enter the total units : "))
+
+# validating units
+if (units <0):
+	exit("Invalid Input! Units cannot be negative")
+#-----------------------------------------------------------------------------------------------------------------
+
+# Calculating bill amount
+bill = 0
+if (units < 100):
+	bill = units*5
+elif (units >100 and units <200):
+	bill = (units*5) + (units-100)*7
+else:
+	total = (units*5) +(units*7)+(units-100)*10
+#-------------------------------------------------------------------------------------------------------------------
+bill_amount = bill
+if (bill_amount >2000):
+	bill_amount = bill_amount+(bill_amount *0.05)
+if (bill_amount <500):
+	bill_amount = 500
+#-------------------------------------------------------------------------------------------------------------------
+
+#Displaying total units
+print("Total Units :" ,units)
+
+#Displaying Bill Amount
+print("Bill Amount: ",bill)
+
+#Displaying Final Payable Amount
+print("Final Payable Amount:",bill_amount)
+
+#------------------------------------------------------------------------------------------------------------------------
+	
