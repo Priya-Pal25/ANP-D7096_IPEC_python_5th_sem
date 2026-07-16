@@ -1,0 +1,41 @@
+Problem 6: Tuple Operations 
+Create a tuple containing names of 15 students. 
+Perform the following: 
+• Count total students  
+• Display first five students  
+• Display last five students  
+• Search a student name  
+• Count occurrences of a given name  
+• Convert tuple into list and sort alphabetically  
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------
+# Tuple containing 15 student names
+students = ( "Amit", "Rahul", "Priya", "Sneha", "Rohan","Anjali", "Vikas", "Neha", "Karan", "Pooja","Rahul", "Meena", "Arjun", "Simran", "Deepa)
+# Count total students
+print("Total Students:", len(students))
+
+# Display first five students
+print("First Five Students:", students[:5])
+
+# Display last five students
+print("Last Five Students:", students[-5:])
+
+# Search a student name
+name = input("Enter student name to search: ")
+
+if name in students:
+    print(name, "is present in the tuple.")
+else:
+    print(name, "is not present in the tuple.")
+
+# Count occurrences of a given name
+count_name = input("Enter student name to count occurrences: ")
+print("Occurrences of", count_name, ":", students.count(count_name))
+
+# Convert tuple into list and sort alphabetically
+student_list = list(students)
+student_list.sort()
+print("\nStudents in Alphabetical Order:")
+print(student_list)
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------

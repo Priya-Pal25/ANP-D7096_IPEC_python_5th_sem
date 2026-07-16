@@ -1,0 +1,62 @@
+Problem 5: List Processing 
+Accept 20 integers from the user into a list. 
+Perform the following: 
+a) Print largest number  
+b) Print second largest number  
+c) Print smallest number  
+d) Remove duplicate elements  
+e) Print only even numbers  
+f) Print numbers divisible by both 3 and 5  
+g) Reverse the list without using reverse()  
+
+#-------------------------------------------------------------------------------------------------------------
+#--------------------------------------------Coding----------------------------------------------------------
+
+list=[]
+print("Enter any 20 numbers:")
+for x in range(20):
+	num = int(input())
+	list.append(num)
+
+Largest_number=max(list)
+#-------------------------------------------------------------------------------------------------------------
+list1=list.sort(reverse = true)
+
+#-------------------------------------------------------------------------------------------------------------
+
+Smallest_number=min(list)
+
+#-------------------------------------------------------------------------------------------------------------
+
+no_duplicates = []
+for num in numbers:
+    if num not in no_duplicates:
+        no_duplicates.append(num)
+#--------------------------------------------------------------------------------------------------------------
+even_numbers = []
+for num in numbers:
+    if num % 2 == 0:
+        even_numbers.append(num)
+#------------------------------------------------------------------------------------------------------------------
+
+divisible_by_3_and_5 = []
+for num in numbers:
+    if num % 3 == 0 and num % 5 == 0:
+        divisible_by_3_and_5.append(num)
+
+#---------------------------------------------------------------------------------------------------------------------
+reversed_list = []
+for i in range(len(numbers) - 1, -1, -1):
+    reversed_list.append(numbers[i])
+	
+#------------------------------------------------------------------------------------------------------------------------
+print("Largest Number:",Largest_number)
+print("Second Largest number:",list1[1])
+print("Smallest Number:",Smallest_Number)
+print("List without Duplicates:", no_duplicates)
+print("Even Numbers:", even_numbers)
+print("Numbers Divisible by both 3 and 5:", divisible_by_3_and_5)
+print("Reversed List:", reversed_list)
+#---------------------------------------------------------------------------------------------------------------------------
+
+

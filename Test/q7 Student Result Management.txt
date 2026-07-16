@@ -1,0 +1,60 @@
+Problem 7: Student Result Management 
+Create a dictionary where 
+Roll No → Marks 
+Store details of 10 students. 
+Perform: 
+• Find topper  
+• Find average marks  
+• Display students scoring above average  
+• Count failed students (Marks < 35)  
+• Display grade using:  
+ 
+Marks Grade 
+90+    A 
+75-89  B 
+60-74  C 
+35-59  D 
+Below 35 Fail
+#-------------------------------------------------------------------------------------------------------------------------------
+# Problem 7: Dictionary Operations
+# Dictionary: Roll No -> Marks
+students = {101: 95,102: 82,103: 67, 104: 45,105: 30,106: 76,107: 91,108: 58,109: 34,110: 88}
+
+# Find topper
+topper_roll = max(students, key=students.get)
+print("Topper Roll No:", topper_roll)
+print("Topper Marks:", students[topper_roll])
+
+# Find average marks
+average = sum(students.values()) / len(students)
+print("\nAverage Marks:", round(average, 2))
+
+# Display students scoring above average
+print("\nStudents Scoring Above Average:")
+for roll, marks in students.items():
+    if marks > average:
+        print("Roll No:", roll, "Marks:", marks)
+
+# Count failed students (Marks < 35)
+failed = 0
+for marks in students.values():
+    if marks < 35:
+        failed += 1
+
+print("\nNumber of Failed Students:", failed)
+
+# Display grades
+print("\nGrades:")
+for roll, marks in students.items():
+    if marks >= 90:
+        grade = "A"
+    elif marks >= 75:
+        grade = "B"
+    elif marks >= 60:
+        grade = "C"
+    elif marks >= 35:
+        grade = "D"
+    else:
+        grade = "Fail"
+
+    print("Roll No:", roll, "Marks:", marks, "Grade:", grade)
